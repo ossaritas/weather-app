@@ -2,9 +2,12 @@
 
 This project was created by O.Serdar Sarıtaş via https://openweathermap.org/api.
 
-1- I made an application using Open Weather Data of 5 cities (Istanbul, London, Berlin, Tokyo, Moscow).
-2- It is to show current weather report showing average temperature, wind strength etc. few features offered by API side.
-3- When any of the listed cities is clicked, a 3-hour forecast for the next 5 days for the relevant city is displayed on the detail page.
+
+<ul>
+ <li>I made an application using Open Weather Data of 5 cities (Istanbul, London, Berlin, Tokyo, Moscow).</li>
+ <li>It is to show current weather report showing average temperature, wind strength etc. few features offered by API side. </li>
+ <li>When any of the listed cities is clicked, a 3-hour forecast for the next 5 days for the relevant city is displayed on the detail page.</li>
+</ul>
 
 <h1>Frameworks used</h1>
 <ul>
@@ -22,3 +25,4 @@ This project was created by O.Serdar Sarıtaş via https://openweathermap.org/ap
 </ul>
 
 <h1>Preview</h1>
+https://weather-app-psi-eight.vercel.app/
