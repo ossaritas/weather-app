@@ -1,6 +1,5 @@
-import { useState, useEffect, useCallback } from 'react';
 import { Box, Text, VStack, HStack, Button } from '@chakra-ui/react';
-import { ArrowLeftIcon, ArrowUpIcon } from '@chakra-ui/icons';
+import { ChevronLeftIcon } from '@chakra-ui/icons';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useGetCityForecastQuery } from '../../store/weatherApi';
 import For from './For';
@@ -22,11 +21,11 @@ const Forecast = () => {
         bgSize="cover"
         bgPosition="center"
         justify="center"
-        color="#FFC000"
+        color="sc1"
       >
-        <Button onClick={() => navigate(-1)}>
+        <Button bg="mc3" _hover={{ bg: 'mc2' }} onClick={() => navigate(-1)}>
           {' '}
-          <ArrowLeftIcon w={6} h={6} />
+          <ChevronLeftIcon w={6} h={6} />
         </Button>
         <Text fontWeight="bold" fontSize="xl">
           {`5-day weather forecast for ${city}`.toUpperCase()}

@@ -9,6 +9,9 @@ const Card = props => {
       borderRadius="lg"
       boxShadow="lg"
       fontSize="18px"
+      _groupHover={{ bg: 'mc4' }}
+      transition="ease-out 200ms"
+      role="group"
     >
       {props.children}
     </Box>
