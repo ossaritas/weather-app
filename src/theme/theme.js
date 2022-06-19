@@ -16,6 +16,7 @@ const theme = extendTheme({
     mc4: '#8CA1CC',
     mc5: '#BBCFFD',
     mc6: '#CCD9F8',
+    sc1: '#FFC000',
   },
   components: {},
 });

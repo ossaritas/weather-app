@@ -4,7 +4,14 @@ import sunPng from '../../assets/icons/sun.png';
 
 const Header = () => {
   return (
-    <VStack spacing={4} position="sticky" top="0" zIndex="banner" bg="mc1">
+    <VStack
+      spacing={4}
+      position="sticky"
+      top="0"
+      zIndex="banner"
+      bg="mc1"
+      color="sc1"
+    >
       <HStack
         p="1.5"
         alignItems="center"

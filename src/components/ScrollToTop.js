@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@chakra-ui/react';
-import { ArrowUpIcon } from '@chakra-ui/icons';
+import { ChevronUpIcon } from '@chakra-ui/icons';
 
 const ScrollToTop = () => {
   const [showTopBtn, setShowTopBtn] = useState(false);
@@ -26,15 +26,16 @@ const ScrollToTop = () => {
         <Button
           w="12"
           h="12"
-          bg="mc4"
+          bg="mc3"
           position="fixed"
           bottom="20"
           right={['16px', '60px']}
           zIndex={1}
           onClick={goToTop}
+          _hover={{ bg: 'mc2' }}
         >
           {' '}
-          <ArrowUpIcon w={8} h={8} color="mc1" />
+          <ChevronUpIcon w={8} h={8} color="sc1" />
         </Button>
       )}
     </div>

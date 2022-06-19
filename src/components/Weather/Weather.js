@@ -72,8 +72,8 @@ const Weather = ({ city }) => {
           />
         </Grid>
       )}
-      <Text fontSize="14px" pr="2.5" textAlign="end">
-        Click anywere to see more &#8594;
+      <Text fontSize="14px" pr="2.5" textAlign="end" color="sc1">
+        Click anywere to see more
       </Text>
     </Card>
   );

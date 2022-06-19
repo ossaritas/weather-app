@@ -1,4 +1,4 @@
-import { Grid, list, Text } from '@chakra-ui/react';
+import { Grid, Text } from '@chakra-ui/react';
 
 import humdPng from '../../assets/icons/percentage.png';
 import windPng from '../../assets/icons/windock.png';
@@ -17,7 +17,7 @@ const For = props => {
         borderRadius="sm"
         textAlign="center"
         fontWeight="semibold"
-        color="#FFC000"
+        color="sc1"
       >
         {props.day ? calcDay(props.day) : 'DD/MM/YYYY'}
       </Text>

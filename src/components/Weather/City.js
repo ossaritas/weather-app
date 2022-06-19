@@ -11,6 +11,9 @@ const City = props => {
       justify="center"
       borderRadius="md"
       color="white"
+      _groupHover={{
+        bgImage: `linear-gradient(rgba(200, 0, 0, 0.4),rgba(0, 0, 0, 0.5)) , url(${props.url})`,
+      }}
     >
       <Text fontSize="xl" fontWeight="bold">
         {props.city}, {props.country}
