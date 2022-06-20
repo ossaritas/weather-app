@@ -4,7 +4,6 @@ import {
   Container,
   Stack,
   Text,
-  useColorModeValue,
   VisuallyHidden,
 } from '@chakra-ui/react';
 import { FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
@@ -34,6 +33,7 @@ const SocialButton = ({ children, label, href }) => {
   );
 };
 
+//Basic footer
 export default function Footer() {
   return (
     <Box bg="mc1" color="mc6">

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '@chakra-ui/react';
 import { ChevronUpIcon } from '@chakra-ui/icons';
 
+// Button for scroll to top
 const ScrollToTop = () => {
   const [showTopBtn, setShowTopBtn] = useState(false);
   useEffect(() => {

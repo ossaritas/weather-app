@@ -33,7 +33,7 @@ export const ucfirst = str => {
   return firstLetter.toUpperCase() + str.substr(1);
 };
 
-//get full date for given date
+//get full date for given date spesific for details page
 export const calcDay = a => {
   return new Date(a).toLocaleString('en-GB', {
     hour12: false,

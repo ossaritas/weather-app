@@ -1,54 +1,66 @@
-import { Box, Text, VStack, HStack, Button } from '@chakra-ui/react';
-import { ChevronLeftIcon } from '@chakra-ui/icons';
-import { useNavigate, useParams } from 'react-router-dom';
-import { useGetCityForecastQuery } from '../../store/weatherApi';
-import For from './For';
-import ScrollToTop from '../ScrollToTop';
+import { Grid, Text } from '@chakra-ui/react';
 
-const Forecast = () => {
-  const { city } = useParams();
-  const navigate = useNavigate();
+import humdPng from '../../assets/icons/percentage.png';
+import windPng from '../../assets/icons/windock.png';
+import pressurePng from '../../assets/icons/atmospheric.png';
 
-  const { data } = useGetCityForecastQuery(city);
+import Card from '../Card';
+import ForElement from './Felement';
 
+import { ucfirst, calcDay } from '../../utils/utils';
+
+// Same as Weathers component with some basic changes.
+const For = props => {
   return (
-    <Box w="full" h="full">
-      <ScrollToTop />
-      <HStack
-        bgImage={`linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.5)) , url(/${city}.jpg)`}
-        w="full"
-        h="200px"
-        bgSize="cover"
-        bgPosition="center"
-        justify="center"
+    <Card>
+      <Text
+        bg="mc3"
+        borderRadius="sm"
+        textAlign="center"
+        fontWeight="semibold"
         color="sc1"
       >
-        <Button bg="mc3" _hover={{ bg: 'mc2' }} onClick={() => navigate(-1)}>
-          {' '}
-          <ChevronLeftIcon w={6} h={6} />
-        </Button>
-        <Text fontWeight="bold" fontSize="xl">
-          {`5-day weather forecast for ${city}`.toUpperCase()}
-        </Text>
-      </HStack>
-      <VStack w="full" spacing="4" p="4">
-        {data?.list.map((item, index) => {
-          return (
-            <For
-              key={index}
-              day={item.dt_txt}
-              icon={item.weather[0].icon}
-              title={item.weather[0].description}
-              heat={item.main.temp}
-              humidity={item.main.humidity}
-              wind={item.wind.speed}
-              pressure={item.main.pressure}
-            />
-          );
-        })}
-      </VStack>
-    </Box>
+        {props.day ? calcDay(props.day) : 'DD/MM/YYYY'}
+      </Text>
+      <Grid
+        h="40"
+        gap="8"
+        p="4"
+        px="8"
+        mx="8"
+        templateColumns="repeat(4,1fr)"
+        alignItems="center"
+        justifyItems="center"
+      >
+        <ForElement
+          icon={`https://openweathermap.org/img/wn/${
+            props.icon ?? '04d'
+          }@4x.png`}
+          title={props.title ? ucfirst(props.title) : 'Title'}
+          description={(props.heat - 273.15).toFixed(1)}
+          symb="&#x2103;"
+        />
+        <ForElement
+          icon={humdPng}
+          title={'Humidity'}
+          symb="%"
+          description={props.humidity}
+        />
+        <ForElement
+          icon={windPng}
+          title={'Wind Speed'}
+          symb="m/s"
+          description={props.wind}
+        />
+        <ForElement
+          icon={pressurePng}
+          title={'Pressure'}
+          symb="hPa"
+          description={props.pressure}
+        />
+      </Grid>
+    </Card>
   );
 };
 
-export default Forecast;
+export default For;

@@ -1,5 +1,6 @@
 import { Text, VStack } from '@chakra-ui/react';
 
+//Reusable City comp with images and date
 const City = props => {
   return (
     <VStack

@@ -1,4 +1,6 @@
 import { VStack, Text, Image } from '@chakra-ui/react';
+
+//Basic reusable comp to display given weather data wind pressure etc.
 const Welement = props => {
   return (
     <VStack

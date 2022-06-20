@@ -13,7 +13,7 @@ import { useGetCityWeatherQuery } from '../../store/weatherApi';
 import { ucfirst, getTime, calcTime } from '../../utils/utils';
 
 const Weather = ({ city }) => {
-  const { data, error, isLoading } = useGetCityWeatherQuery(city);
+  const { data, error, isLoading } = useGetCityWeatherQuery(city); // Data from WeatherApi -- RTK Query
 
   return (
     <Card>

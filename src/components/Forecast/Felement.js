@@ -1,4 +1,6 @@
 import { VStack, Text, Image } from '@chakra-ui/react';
+
+// Same as Welement component with some basic changes.
 const ForElement = props => {
   return (
     <VStack
